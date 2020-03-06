@@ -1,0 +1,34 @@
+{
+  "uCompassAdminApp": {
+    "campusService": {
+      "home": {
+        "title": "CampusServices",
+        "createLabel": "Campus Service を追加",
+        "createOrEditLabel": "Campus Serviceを追加または編集",
+        "notFound": "No Campus Services found"
+      },
+      "created": "A new Campus Service is created with identifier {{ param }}",
+      "updated": "A Campus Service is updated with identifier {{ param }}",
+      "deleted": "A Campus Service is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Campus Service {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Campus Service"
+      },
+      "idd": "Idd",
+      "name": "Name",
+      "open": "Open",
+      "description": "Description",
+      "longitude": "Longitude",
+      "latitude": "Latitude",
+      "estimatedWaitingTime": "Estimated Waiting Time",
+      "attente": "Attente",
+      "openingTime": "Opening Time",
+      "closureTime": "Closure Time",
+      "affluence": "Affluence",
+      "type": "Type",
+      "evenement": "Evenement"
+    }
+  }
+}

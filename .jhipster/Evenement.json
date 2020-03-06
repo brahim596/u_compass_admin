@@ -1,0 +1,40 @@
+{
+    "name": "Evenement",
+    "fields": [
+        {
+            "fieldName": "dateDebut",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "dateFin",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "campusService",
+            "otherEntityRelationshipName": "evenement",
+            "relationshipName": "campusService",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200306095000",
+    "entityTableName": "evenement",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

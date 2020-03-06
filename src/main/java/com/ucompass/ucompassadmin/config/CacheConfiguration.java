@@ -42,6 +42,9 @@ public class CacheConfiguration {
             createCache(cm, com.ucompass.ucompassadmin.domain.User.class.getName());
             createCache(cm, com.ucompass.ucompassadmin.domain.Authority.class.getName());
             createCache(cm, com.ucompass.ucompassadmin.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.ucompass.ucompassadmin.domain.CampusService.class.getName());
+            createCache(cm, com.ucompass.ucompassadmin.domain.CampusService.class.getName() + ".evenements");
+            createCache(cm, com.ucompass.ucompassadmin.domain.Evenement.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
