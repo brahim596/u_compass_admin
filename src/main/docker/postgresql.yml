@@ -1,0 +1,11 @@
+version: '2'
+services:
+  ucompassadmin-postgresql:
+    image: postgres:12.1
+    # volumes:
+    #     - ~/volumes/jhipster/uCompassAdmin/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=uCompassAdmin
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
