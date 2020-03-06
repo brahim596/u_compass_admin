@@ -1,0 +1,53 @@
+enum Affluence{
+LOW,
+MEDIUM,
+HIGH,
+VERY_HIGH
+}
+
+enum Type{
+RESTAURATION,
+ADMINISTRATION,
+BATCOURS
+}
+
+entity CampusService{
+    idd String 
+	name String
+    open Boolean
+    description String
+    longitude Double
+    latitude Double
+    estimatedWaitingTime Duration
+    attente Integer
+    openingTime Instant
+    closureTime Instant
+    affluence Affluence
+    type Type
+}
+
+relationship OneToMany {
+CampusService to Evenement
+}
+
+
+entity Evenement{
+	dateDebut Instant
+    dateFin Instant
+    title String
+    description String
+}
+
+
+
+// Set pagination options
+paginate CampusService with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
