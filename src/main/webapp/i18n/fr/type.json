@@ -1,0 +1,10 @@
+{
+  "uCompassAdminApp": {
+    "Type": {
+      "null": "",
+      "RESTAURATION": "RESTAURATION",
+      "ADMINISTRATION": "ADMINISTRATION",
+      "BATCOURS": "BATCOURS"
+    }
+  }
+}

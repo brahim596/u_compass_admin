@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="campusService">
+            <h2><span jhiTranslate="uCompassAdminApp.campusService.detail.title">Campus Service</span> {{ campusService.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.idd">Idd</span></dt>
+                <dd>
+                    <span>{{ campusService.idd }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.name">Name</span></dt>
+                <dd>
+                    <span>{{ campusService.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.open">Open</span></dt>
+                <dd>
+                    <span>{{ campusService.open }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.description">Description</span></dt>
+                <dd>
+                    <span>{{ campusService.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.longitude">Longitude</span></dt>
+                <dd>
+                    <span>{{ campusService.longitude }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.latitude">Latitude</span></dt>
+                <dd>
+                    <span>{{ campusService.latitude }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.estimatedWaitingTime">Estimated Waiting Time</span></dt>
+                <dd>
+                    <span>{{ campusService.estimatedWaitingTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.attente">Attente</span></dt>
+                <dd>
+                    <span>{{ campusService.attente }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.openingTime">Opening Time</span></dt>
+                <dd>
+                    <span>{{ campusService.openingTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.closureTime">Closure Time</span></dt>
+                <dd>
+                    <span>{{ campusService.closureTime }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.affluence">Affluence</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'uCompassAdminApp.Affluence.' + campusService.affluence }}">{{ campusService.affluence }}</span>
+                </dd>
+                <dt><span jhiTranslate="uCompassAdminApp.campusService.type">Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'uCompassAdminApp.Type.' + campusService.type }}">{{ campusService.type }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/campus-service', campusService.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

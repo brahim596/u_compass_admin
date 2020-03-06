@@ -1,0 +1,107 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-campus-service-heading" jhiTranslate="uCompassAdminApp.campusService.home.createOrEditLabel">Create or edit a Campus Service</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.idd" for="field_idd">Idd</label>
+                    <input type="text" class="form-control" name="idd" id="field_idd"
+                           formControlName="idd"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           formControlName="name"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.open" for="field_open">Open</label>
+                    <input type="checkbox" class="form-control" name="open" id="field_open"
+                           formControlName="open"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                           formControlName="description"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.longitude" for="field_longitude">Longitude</label>
+                    <input type="number" class="form-control" name="longitude" id="field_longitude"
+                           formControlName="longitude"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.latitude" for="field_latitude">Latitude</label>
+                    <input type="number" class="form-control" name="latitude" id="field_latitude"
+                           formControlName="latitude"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.estimatedWaitingTime" for="field_estimatedWaitingTime">Estimated Waiting Time</label>
+                    <input type="number" class="form-control" name="estimatedWaitingTime" id="field_estimatedWaitingTime"
+                           formControlName="estimatedWaitingTime"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.attente" for="field_attente">Attente</label>
+                    <input type="number" class="form-control" name="attente" id="field_attente"
+                           formControlName="attente"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.openingTime" for="field_openingTime">Opening Time</label>
+                    <div class="d-flex">
+                        <input id="field_openingTime" type="datetime-local" class="form-control" name="openingTime" formControlName="openingTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.closureTime" for="field_closureTime">Closure Time</label>
+                    <div class="d-flex">
+                        <input id="field_closureTime" type="datetime-local" class="form-control" name="closureTime" formControlName="closureTime" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.affluence" for="field_affluence">Affluence</label>
+                    <select class="form-control" name="affluence" formControlName="affluence" id="field_affluence">
+                        <option value="LOW">{{ 'uCompassAdminApp.Affluence.LOW' | translate }}</option>
+                        <option value="MEDIUM">{{ 'uCompassAdminApp.Affluence.MEDIUM' | translate }}</option>
+                        <option value="HIGH">{{ 'uCompassAdminApp.Affluence.HIGH' | translate }}</option>
+                        <option value="VERY_HIGH">{{ 'uCompassAdminApp.Affluence.VERY_HIGH' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="uCompassAdminApp.campusService.type" for="field_type">Type</label>
+                    <select class="form-control" name="type" formControlName="type" id="field_type">
+                        <option value="RESTAURATION">{{ 'uCompassAdminApp.Type.RESTAURATION' | translate }}</option>
+                        <option value="ADMINISTRATION">{{ 'uCompassAdminApp.Type.ADMINISTRATION' | translate }}</option>
+                        <option value="BATCOURS">{{ 'uCompassAdminApp.Type.BATCOURS' | translate }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+{
+    "name": "CampusService",
+    "fields": [
+        {
+            "fieldName": "idd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "open",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "latitude",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "estimatedWaitingTime",
+            "fieldType": "Duration"
+        },
+        {
+            "fieldName": "attente",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "openingTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "closureTime",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "affluence",
+            "fieldType": "Affluence",
+            "fieldValues": "LOW,MEDIUM,HIGH,VERY_HIGH"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "Type",
+            "fieldValues": "RESTAURATION,ADMINISTRATION,BATCOURS"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "evenement",
+            "otherEntityRelationshipName": "campusService",
+            "relationshipName": "evenement"
+        }
+    ],
+    "changelogDate": "20200306094900",
+    "entityTableName": "campus_service",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

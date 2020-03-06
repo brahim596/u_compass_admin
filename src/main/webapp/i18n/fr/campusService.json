@@ -1,0 +1,34 @@
+{
+  "uCompassAdminApp": {
+    "campusService": {
+      "home": {
+        "title": "CampusServices",
+        "createLabel": "Créer un nouveau Campus Service",
+        "createOrEditLabel": "Créer ou éditer un Campus Service",
+        "notFound": "Aucun Campus Service trouvé"
+      },
+      "created": "Un nouveau Campus Service a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Campus Service avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Campus Service avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Campus Service {{ id }} ?"
+      },
+      "detail": {
+        "title": "Campus Service"
+      },
+      "idd": "Idd",
+      "name": "Name",
+      "open": "Open",
+      "description": "Description",
+      "longitude": "Longitude",
+      "latitude": "Latitude",
+      "estimatedWaitingTime": "Estimated Waiting Time",
+      "attente": "Attente",
+      "openingTime": "Opening Time",
+      "closureTime": "Closure Time",
+      "affluence": "Affluence",
+      "type": "Type",
+      "evenement": "Evenement"
+    }
+  }
+}
